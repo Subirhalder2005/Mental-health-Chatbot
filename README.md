@@ -38,6 +38,7 @@ It provides a calm, empathetic conversational experience designed to offer emoti
 -**├── requirements.txt # Python dependencies**
 -**├── .gitignore # Ignored files**
 -**└── README.md # Project documentation**
+---
 ## ▶️ Run the App
 - streamlit run calm_connect.py
 
