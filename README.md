@@ -31,3 +31,13 @@ It provides a calm, empathetic conversational experience designed to offer emoti
 ---
 
 ## 📁 Project Structure
+S_HEALTH/
+│
+├── calm_connect.py # Main Streamlit application
+├── background.png # UI background image
+├── requirements.txt # Python dependencies
+├── .gitignore # Ignored files
+└── README.md # Project documentation
+## ▶️ Run the App
+- streamlit run calm_connect.py
+
