@@ -1,11 +1,11 @@
 import streamlit as st
 import uuid
-from openai import OpenAI
+from groq import Groq
 from db import get_conn
 from nlp_utils import detect_mood, is_crisis
 
-client = OpenAI()
-MODEL = "gpt-4o-mini"
+client = Groq(api_key=None)  # reads from GROQ_API_KEY automatically
+MODEL = "llama-3.1-8b-instant"
 
 SYSTEM_PROMPT = (
     "You are a calm, empathetic mental health support chatbot. "
@@ -76,12 +76,14 @@ def call_llm(history, mood):
         {"role": "system", "content": f"User mood: {mood}"}
     ] + history
 
-    res = client.chat.completions.create(
+    response = client.chat.completions.create(
         model=MODEL,
         messages=messages,
         temperature=0.7
     )
-    return res.choices[0].message.content
+
+    return response.choices[0].message.content
+
 
 def save_chat(cid, user, title):
     conn = get_conn()
@@ -129,3 +131,4 @@ def load_user_chats(user):
         save_chat(cid, user, "New Chat")
 
     conn.close()
+
