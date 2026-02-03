@@ -132,3 +132,4 @@ def load_user_chats(user):
 
     conn.close()
 
+
