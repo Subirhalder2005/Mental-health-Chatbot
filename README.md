@@ -8,7 +8,8 @@ It provides a calm, empathetic conversational experience designed to offer emoti
 ---
 
 ## 🌐 Live Demo
-🔗 **App Link:** https://mental-health-chatbot-5lmomp8rz9whavb9bmsf7y.streamlit.app/
+🔗 **App Link:**  https://mental-health-chatbot-d86pnrqmuvuqz4yhhqldbv.streamlit.app/
+
 
 ---
 
